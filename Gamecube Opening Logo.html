@@ -1,0 +1,202 @@
+<html class=" -webkit-"><head><meta charset="UTF-8"><meta name="robots" content="noindex"><link rel="canonical" href="http://codepen.io/seanjohnson08/pen/Jsihu">
+
+<script src="http://s.codepen.io/assets/libs/prefixfree.min.js"></script>
+<style class="cp-pen-styles">body {
+  background: #000;
+}
+
+#environment {
+  width: 300px;
+  height: 300px;
+  perspective: 10000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -150px 0 0 -150px;
+}
+
+#gamecube {
+  transform-style: preserve-3d;
+  transform: translateZ(-150px) rotateX(60deg) rotateZ(45deg);
+  transform-origin: 50% 50%;
+  width: 300px;
+  height: 300px;
+}
+#gamecube > div {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+}
+#gamecube > div:nth-child(1) {
+  transform: rotateX(90deg) translateZ(150px);
+}
+#gamecube > div:nth-child(2) {
+  transform: rotateX(-90deg) translateZ(150px);
+}
+#gamecube > div:nth-child(2) > div:nth-child(3), #gamecube > div:nth-child(2) > div:nth-child(4), #gamecube > div:nth-child(2) > div:nth-child(5) {
+  float: left;
+}
+#gamecube > div:nth-child(3) {
+  transform: rotateX(90deg) rotateY(90deg) translateZ(150px);
+}
+#gamecube > div:nth-child(3) > div {
+  float: left;
+}
+#gamecube > div:nth-child(3) > div:nth-child(5) {
+  clear: left;
+}
+#gamecube > div:nth-child(4) {
+  transform: rotateY(-90deg) translateZ(150px);
+}
+#gamecube > div:nth-child(5) {
+  transform: rotateX(180deg) translateZ(150px);
+}
+#gamecube > div:nth-child(6) {
+  transform: rotateX(0deg) translateZ(150px);
+}
+#gamecube > div:nth-child(6) > div:nth-child(1), #gamecube > div:nth-child(6) > div:nth-child(2) {
+  float: left;
+}
+#gamecube > div:nth-child(6) > div:nth-child(3) {
+  clear: left;
+}
+#gamecube > div > div {
+  opacity: 0;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  background: #616CBA;
+  -webkit-animation: fadeIn 1s forwards;
+}
+
+#gamecube > div::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-radial-gradient(left top, #616cba, transparent 60%);
+  border: 1px solid #616CBA;
+  -webkit-animation: lit 6s;
+}
+
+@-webkit-keyframes lit {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#gamecube .p-1 {
+  -webkit-animation-delay: 0.3s;
+}
+
+#gamecube .p-2 {
+  -webkit-animation-delay: 0.6s;
+}
+
+#gamecube .p-3 {
+  -webkit-animation-delay: 0.9s;
+}
+
+#gamecube .p-4 {
+  -webkit-animation-delay: 1.2s;
+}
+
+#gamecube .p-5 {
+  -webkit-animation-delay: 1.5s;
+}
+
+#gamecube .p-6 {
+  -webkit-animation-delay: 1.8s;
+}
+
+#gamecube .p-7 {
+  -webkit-animation-delay: 2.1s;
+}
+
+#gamecube .p-8 {
+  -webkit-animation-delay: 2.4s;
+}
+
+#gamecube .p-9 {
+  -webkit-animation-delay: 2.7s;
+}
+
+#gamecube .p-10 {
+  -webkit-animation-delay: 3s;
+}
+
+#gamecube .p-11 {
+  -webkit-animation-delay: 3.3s;
+}
+
+#gamecube .p-12 {
+  -webkit-animation-delay: 3.6s;
+}
+
+#gamecube .p-13 {
+  -webkit-animation-delay: 3.9s;
+}
+
+#gamecube .p-14 {
+  -webkit-animation-delay: 4.2s;
+}
+
+#gamecube .p-15 {
+  -webkit-animation-delay: 4.5s;
+}
+
+#gamecube .p-16 {
+  -webkit-animation-delay: 4.8s;
+}
+</style></head><body>
+<div id="environment">
+  <div id="gamecube">
+    <div class="face"></div>
+    <div class="face">
+      <div class="p-5"></div>
+      <div class="p-6"></div>
+      <div class="p-7"></div>
+      <div class="p-8"></div>
+      <div class="p-9"></div>
+    </div>
+    <div class="face">
+      <div class="p-12"></div>
+      <div class="p-11"></div>
+      <div class="p-10"></div>
+      <div class="p-13"></div>
+      <div class="p-14"></div>
+      <div class="p-15"></div>
+      <div class="p-16"></div>
+    </div>
+    <div class="face"></div>
+    <div class="face"></div>
+    <div class="face">
+      <div class="p-2"></div>
+      <div class="p-1"></div>
+      <div class="p-3"></div>
+      <div class="p-4"></div>
+    </div>
+  </div>
+</div>
+
+<script src="http://codepen.io/assets/editor/live/css_live_reload_init.js"></script>
+</body></html>
